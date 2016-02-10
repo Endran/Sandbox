@@ -4,21 +4,22 @@ public class ClassUsingFinalHardToMock implements IClassUsingFinalHardToMock {
 
     @Override
     public boolean callHardStaticMethodAndReturnParameter(boolean parameter) {
-        HardToMockFinalClass.goodLuckMockingThisStaticMethod();
-        return parameter;
+        return HardToMockFinalClass.goodLuckMockingThisStaticMethod(parameter);
     }
 
 
     @Override
     public boolean callHardFinalMethodAndReturnParameter(HardToMockFinalClass hardToMockFinalClass, boolean parameter) {
-        hardToMockFinalClass.goodLuckMockingThisFinalMethod();
-        return parameter;
+        return hardToMockFinalClass.goodLuckMockingThisFinalMethod(parameter);
+    }
+
+    public boolean callOpenHardFinalMethodAndReturnParameter(HardToMockOpenClass hardToMockOpenClass, boolean parameter) {
+        return hardToMockOpenClass.goodLuckMockingThisFinalMethod(parameter);
     }
 
 
     @Override
     public boolean callHardMethodAndReturnParameter(HardToMockFinalClass hardToMockFinalClass, boolean parameter) {
-        hardToMockFinalClass.goodLuckMockingThisNormalMethod();
-        return parameter;
+        return hardToMockFinalClass.goodLuckMockingThisNormalMethod(parameter);
     }
 }
