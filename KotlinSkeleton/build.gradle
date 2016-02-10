@@ -49,6 +49,10 @@ allprojects {
     ext.stethoVersion = '1.2.0'
     ext.spekVersion = '0.1.194'
     ext.timberVersion = '4.1.0'
+
+    ext.mockitoVersion = "1.10.19"
+    ext.opencsvVersion = "3.6"
+    ext.powermockVersion = "1.6.3"
 }
 
 task clean(type: Delete) {

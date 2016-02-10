@@ -43,6 +43,10 @@ dependencies {
     debugCompile "com.facebook.stetho:stetho:${stethoVersion}"
     debugCompile "com.facebook.stetho:stetho-urlconnection:${stethoVersion}"
 
+    testCompile "org.powermock:powermock-api-mockito:${powermockVersion}"
+    testCompile "org.powermock:powermock-module-junit4:${powermockVersion}"
+    testCompile "org.mockito:mockito-core:${mockitoVersion}"
+
     testCompile "junit:junit:${jUnitVersion}"
     testCompile "org.jmockit:jmockit:${jMockitVersion}"
     testCompile("com.squareup.assertj:assertj-android:${androidAssertJVersion}"){
