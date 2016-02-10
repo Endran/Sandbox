@@ -10,7 +10,7 @@ import static org.powermock.api.mockito.PowerMockito.when;
 
 public class NotWorkingMockitoTest {
 
-    //    @Mock
+    @Mock
     private HardToMockFinalClass hardToMockClassMock;
 
     @Mock
