@@ -4,8 +4,6 @@ import android.support.annotation.NonNull;
 
 public class ClassUsingFinalHardToMockWrapper implements IClassUsingFinalHardToMock {
 
-    private ClassUsingFinalHardToMockWrapper hardTo;
-
     @Override
     public boolean callHardStaticMethodAndReturnParameter(boolean parameter) {
         throw new RuntimeException("I surrender");
@@ -13,15 +11,13 @@ public class ClassUsingFinalHardToMockWrapper implements IClassUsingFinalHardToM
 
     @Override
     public boolean callHardFinalMethodAndReturnParameter(HardToMockFinalClass hardToMockFinalClass, boolean parameter) {
-        HardToMockFinalClassWrapper wrapper = wrap(hardToMockFinalClass);
-        wrapper.goodLuckMockingThisFinalMethod();
+        wrap(hardToMockFinalClass).goodLuckMockingThisFinalMethod();
         return parameter;
     }
 
     @Override
     public boolean callHardMethodAndReturnParameter(HardToMockFinalClass hardToMockFinalClass, boolean parameter) {
-        HardToMockFinalClassWrapper wrapper = wrap(hardToMockFinalClass);
-        wrapper.goodLuckMockingThisNormalMethod();
+        wrap(hardToMockFinalClass).goodLuckMockingThisNormalMethod();
         return parameter;
     }
 
