@@ -7,15 +7,15 @@ public class HardToMockFinalClassWrapper {
         this.original = original;
     }
 
-    public void goodLuckMockingThisStaticMethod() {
-        HardToMockFinalClass.goodLuckMockingThisStaticMethod();
+    public boolean goodLuckMockingThisStaticMethod(boolean parameter) {
+        return HardToMockFinalClass.goodLuckMockingThisStaticMethod(parameter);
     }
 
-    public void goodLuckMockingThisFinalMethod() {
-        original.goodLuckMockingThisFinalMethod();
+    public boolean goodLuckMockingThisFinalMethod(boolean parameter) {
+        return original.goodLuckMockingThisFinalMethod(parameter);
     }
 
-    public void goodLuckMockingThisNormalMethod() {
-        original.goodLuckMockingThisNormalMethod();
+    public boolean goodLuckMockingThisNormalMethod(boolean parameter) {
+        return original.goodLuckMockingThisNormalMethod(parameter);
     }
 }

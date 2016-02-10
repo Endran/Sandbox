@@ -11,13 +11,13 @@ public class ClassUsingFinalHardToMockWrapper implements IClassUsingFinalHardToM
 
     @Override
     public boolean callHardFinalMethodAndReturnParameter(HardToMockFinalClass hardToMockFinalClass, boolean parameter) {
-        wrap(hardToMockFinalClass).goodLuckMockingThisFinalMethod();
+        wrap(hardToMockFinalClass).goodLuckMockingThisFinalMethod(parameter);
         return parameter;
     }
 
     @Override
     public boolean callHardMethodAndReturnParameter(HardToMockFinalClass hardToMockFinalClass, boolean parameter) {
-        wrap(hardToMockFinalClass).goodLuckMockingThisNormalMethod();
+        wrap(hardToMockFinalClass).goodLuckMockingThisNormalMethod(parameter);
         return parameter;
     }
 

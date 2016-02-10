@@ -33,7 +33,7 @@ public class MockitoTest {
     public void ShouldReturnTrue_WhenMethodUsingStaticIsCalled() {
         boolean value = someClass.callHardStaticMethodAndReturnParameter(true);
 
-        verify(hardToMockClassMock).goodLuckMockingThisStaticMethod();
+        verify(hardToMockClassMock).goodLuckMockingThisStaticMethod(true);
         assertThat(value).isTrue();
     }
 
@@ -43,7 +43,7 @@ public class MockitoTest {
 
         boolean value = someClass.callHardFinalMethodAndReturnParameter(anotherInstance, true);
 
-        verify(hardToMockClassMock).goodLuckMockingThisFinalMethod();
+        verify(hardToMockClassMock).goodLuckMockingThisFinalMethod(true);
         assertThat(value).isTrue();
     }
 
@@ -53,7 +53,7 @@ public class MockitoTest {
 
         boolean value = someClass.callHardMethodAndReturnParameter(anotherInstance, true);
 
-        verify(hardToMockClassMock).goodLuckMockingThisNormalMethod();
+        verify(hardToMockClassMock).goodLuckMockingThisNormalMethod(true);
         assertThat(value).isTrue();
     }
 }
