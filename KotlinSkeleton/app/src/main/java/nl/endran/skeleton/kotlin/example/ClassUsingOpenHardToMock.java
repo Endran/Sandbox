@@ -19,4 +19,8 @@ public class ClassUsingOpenHardToMock {
     public Map<String, String> getMap() {
         return HardToMockOpenClass.getMapStatic();
     }
+
+    public HardToMockOpenClass willCallConstructor() {
+        return new HardToMockOpenClass();
+    }
 }

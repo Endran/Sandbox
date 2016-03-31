@@ -5,7 +5,9 @@ import org.junit.Test;
 
 import java.util.Map;
 
+import mockit.Expectations;
 import mockit.Mocked;
+import mockit.Verifications;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -57,5 +59,19 @@ public class ClassUsingOpenHardToMockTest {
     public void ShouldX_WhenY() {
         Map<String, String> map = someClass.getMap();
         assertThat(map.get("1")).isEqualTo("2");
+    }
+
+    @Test
+    public void ShouldCallConstructor_WhenInvoked() {
+        new Expectations(){{
+            new HardToMockOpenClass();
+        }};
+
+        HardToMockOpenClass hardToMockOpenClass = someClass.willCallConstructor();
+        assertThat(hardToMockOpenClass).isNotNull();
+
+        new Verifications(){{
+            new HardToMockOpenClass();
+        }};
     }
 }
